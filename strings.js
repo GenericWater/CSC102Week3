@@ -39,3 +39,62 @@ function checkPalindrome()
 
     document.getElementById("results").innerHTML = "You entered: " + userInput + " | Result: " + resultMessage; // concatination of strings
 }
+
+// Assignment 3.2: User Input Validation
+function checkCreds()
+{
+    // Hold the variables under const for inputted data so it remains the same
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    var combinedName = firstName + " " + lastName;
+
+
+    const zipCode = document.getElementById("zipCode").value;
+
+    // if form has started to be filled out...
+    if (combinedName.length > 0 && zipCode.length > 0) 
+    {
+        // if the length of combinedName is more than 20, try again
+        if (combinedName.length > 20) 
+        {
+            alert("The entered name must be less than 20 characters.");
+        }
+
+        // if zipcode is not 5 in length, display an alert
+        if (zipCode.length != 5) // we want zipcode to ONLY be 5 digits long
+        {
+            alert("The zip code must be 5 digits.");
+        }
+    
+        // Check if all required conditions are met
+        if (combinedName.length < 20 && zipCode.length == 5)
+        {
+            // hold location of secret message here
+            var secretMessage = document.getElementById("secretMessage"); 
+
+            // create an image element
+            var img = document.createElement("img");
+
+            // Set the source (URL) of image
+            img.src = "/Images/secretMessagePNG.png"; // Not working unsure why????
+            img.alt = "secretMessageImg";
+
+            // Append the image to the div
+            secretMessage.appendChild(img);
+
+            // Creates a <p></p> on the HTML document
+            var paragraph = document.createElement("p"); 
+
+            // set the text of the paragraph
+            paragraph.textContent = "You have unlocked the secret! Keep it up!";
+
+            //Append the paragraph to the div
+            secretMessage.appendChild(paragraph);
+        }
+    }
+    else // If nothing is entered into the form
+    {
+        alert("Please input into the form before pressing submit");
+    }
+    
+}

@@ -40,6 +40,15 @@ input[type="text"] /* calls to change input field where text is inputted*/
     border-radius: 5px;
 }
 
+input[type="number"]
+{
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ff69b4; /* Hot pink border for the input field */
+    border-radius: 5px;
+}
+
 input[type="button"] 
 {
     background-color: #ff69b4; /* Hot pink button color */
@@ -59,4 +68,17 @@ input[type="button"]:hover /* Change button appearance on hover! */
 #results /* # will make it call to an id */
 {
     color: #ca75a0; /* Change text color */
+}
+
+#secretMessage
+{
+    color: #ca75a0; /* Change text color */
+}
+
+button:hover /* Couldn't get this to work */
+{
+    background-color: chartreuse;
+    color:white;
+    padding: 16px 32px;
+    transition-duration: 0.4s;
 }

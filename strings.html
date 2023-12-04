@@ -19,7 +19,21 @@
     </form>
 
     <br>
-    <div id = "results"> Results print here! </div>
+    <div id = "results"> Results for Palindrome Checker print here! </div>
+    <br> <br>
+
+    <!--Assignment 3.2: User Input Validation-->
+    <form id = "login" onsubmit = "return false">
+        First Name: <br> <input type = "text" id= "firstName" required/>
+        <br>
+        Last Name: <br> <input type ="text" id= "lastName" required/> <!-- required at the end will display a nice mention that the text field is required to fill out-->
+        <br>
+        Zip Code: <br> <input type = "number" id = "zipCode" required/>
+
+        <input type = "button" value = "submit" onclick = "checkCreds();"/>
+    </form>
+
+    <div id = "secretMessage"></div>
 
 </body>
 </html>
