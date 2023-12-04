@@ -1,0 +1,25 @@
+<!--Assignment 3.1: Palindrome Checker | Lela J. Sanchez-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "strings.js"></script> <!--link to JavaScript file-->
+    <link rel="stylesheet" href="strings.css"> <!--link to CSS file-->
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <h1> Palindrome Checker </h1>
+
+    <form id = "strInput" onsubmit = "return false"> <!--can type in here like a paragraph tag, need the onsubmit for navigation purposes | id is for formatting CSS--> 
+        Enter word or phrase here: <br> <input type = "text" id = "inputString"/>  <!--id is for JavaScript functionality, to call value-->
+        <!--Can start id with a number, CANNOT be done with variables, only ids!-->
+        <br> <br>
+        <input type = "button" value = "Check Your Palindrome Here!" onclick = "checkPalindrome();"/> <!--will display a button and run function from JavaScript file onclick-->
+    </form>
+
+    <br>
+    <div id = "results"> Results print here! </div>
+
+</body>
+</html>
